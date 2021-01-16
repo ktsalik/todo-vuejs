@@ -10,6 +10,18 @@ let Dashboard = Vue.component('Dashboard', {
       router.push({ path: 'todo/' + id });
     },
   },
+  created: function() {
+    if (localStorage['last-seen']) {
+      let lastSeenTodo = this.todos.find((todo) => todo.id == localStorage['last-seen'])
+      this.todos.forEach((todo) => todo.lastSeen = false);
+      lastSeenTodo.lastSeen = true;
+      setTimeout(() => {
+        lastSeenTodo.lastSeen = false;
+        this.$forceUpdate();
+      }, 100);
+      localStorage.removeItem('last-seen');
+    }
+  },
   template: `
     <div class="Dashboard view">
       <router-link

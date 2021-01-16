@@ -23,6 +23,7 @@ let Todo = Vue.component('Todo', {
           title: this.view.title,
           text: this.view.text,
         });
+        localStorage.setItem('last-seen', this.$route.params.id);
         history.back();
       }
     },

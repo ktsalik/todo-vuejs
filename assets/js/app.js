@@ -43,9 +43,8 @@ new Vue({
   },
   methods: {
     onAddTodo: function(data) {
-      let todoId = this.todos.length + 1;
       this.todos.push({
-        id: todoId,
+        id: data.id,
         title: data.title,
         text: data.text,
       });

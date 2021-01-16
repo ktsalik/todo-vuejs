@@ -1,4 +1,5 @@
 const New = Vue.component('New', {
+  props: ['todos'],
   data: function() {
     return {
       view: {
@@ -13,10 +14,13 @@ const New = Vue.component('New', {
     },
     add: function() {
       if (this.view.title.trim().length) {
+        let todoId = this.todos.length + 1;
         this.$emit('add', {
+          id: todoId,
           title: this.view.title,
           text: this.view.text,
         });
+        localStorage.setItem('last-seen', todoId);
         history.back();
       }
     },
