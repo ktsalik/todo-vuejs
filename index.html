@@ -11,13 +11,29 @@
   <link rel="preconnect" href="https://fonts.gstatic.com">
   <link href="https://fonts.googleapis.com/css2?family=Ubuntu:wght@300&display=swap" rel="stylesheet">
 
-
+  <link href="assets/css/app.css" rel="stylesheet">
+  <link href="assets/css/todo.component.css" rel="stylesheet">
+  <link href="assets/css/dashboard.css" rel="stylesheet">
+  <link href="assets/css/new.css" rel="stylesheet">
+  <link href="assets/css/todo.css" rel="stylesheet">
 </head>
 <body>
-  <div id="App"></div>
+  <div
+    id="App"
+    v-bind:class="{ light: theme == 'light' }">
+    <router-view
+      @add="onAddTodo"
+      @edit="onEditTodo"
+      :todos="todos"></router-view>
+  </div>
 
   <script src="assets/lib/vue.js"></script>
-  <script src="assets/js/dashboard.component.js"></script>
+  <script src="assets/lib/vue-router.js"></script>
+
+  <script src="assets/js/todo.component.js"></script>
+  <script src="assets/js/dashboard.view.js"></script>
+  <script src="assets/js/new.view.js"></script>
+  <script src="assets/js/todo.view.js"></script>
   <script src="assets/js/app.js"></script>
 </body>
 </html>

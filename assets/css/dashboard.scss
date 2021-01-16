@@ -1,0 +1,107 @@
+@import 'variables';
+
+.Dashboard {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  user-select: none;
+
+  .new-record-container {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    width: 125px;
+    height: 150px;
+    border: 1px solid;
+    border-radius: 7px;
+    margin-left: 15px;
+    font-size: 40px;
+    font-weight: bold;
+    cursor: pointer;
+    text-decoration: none;
+  }
+
+  .list {
+    display: flex;
+    flex-direction: row-reverse;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap-reverse;
+
+    .item {
+      display: flex;
+      flex-direction: column;
+      justify-content: flex-start;
+      align-items: flex-start;
+      width: 125px;
+      height: 150px;
+      margin: 15px;
+      border: 1px solid;
+      border-radius: 7px;
+      cursor: pointer;
+      transition: background-color 500ms;
+
+      .title {
+        width: calc(100% - 5px - 5px);
+        flex-basis: 20px;
+        padding: 5px;
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        border-bottom: 1px solid;
+      }
+
+      .text {
+        padding: 5px;
+        flex-basis: calc(100% - 20px);
+        overflow-y: auto;
+        overflow-x: hidden;
+        word-break: break-all;
+
+        &::-webkit-scrollbar {
+          width: 10px;
+        }
+
+        &::-webkit-scrollbar-track {
+          background: #f1f1f1;
+        }
+
+        &::-webkit-scrollbar-thumb {
+          background: #888;
+        }
+        
+        &::-webkit-scrollbar-thumb:hover {
+          background: #555;
+        }
+      }
+
+      &.last-seen {
+        background-color: #FF9900 !important;
+      }
+    }
+  }
+}
+
+#App.light {
+
+  .new-record-container {
+    color: $light-color;
+    border-color: $light-border-color;
+    background-color: $light-background-color;
+  }
+
+  .list {
+
+    .item {
+      color: $light-color;
+      border-color: $light-border-color;
+      background-color: $light-background-color;
+
+      .title {
+        border-color: $light-border-color;
+      }
+    }
+  }
+}

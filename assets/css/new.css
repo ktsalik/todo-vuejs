@@ -1,0 +1,21 @@
+.New .btn-back {
+  display: inline-block;
+  font-size: 45px;
+  cursor: pointer;
+}
+
+.New .btn-add {
+  border: 1px solid;
+  margin-top: 10px;
+  padding: 4px 8px;
+  font-size: 17px;
+  cursor: pointer;
+  outline: none;
+}
+
+#App.light .New .btn-add {
+  border-color: #CCCCCC;
+  color: #333333;
+  background-color: #FFFFFF;
+}
+/*# sourceMappingURL=new.css.map */

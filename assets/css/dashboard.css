@@ -1,0 +1,143 @@
+.Dashboard {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
+}
+
+.Dashboard .new-record-container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  width: 125px;
+  height: 150px;
+  border: 1px solid;
+  border-radius: 7px;
+  margin-left: 15px;
+  font-size: 40px;
+  font-weight: bold;
+  cursor: pointer;
+  text-decoration: none;
+}
+
+.Dashboard .list {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: reverse;
+      -ms-flex-direction: row-reverse;
+          flex-direction: row-reverse;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -ms-flex-wrap: wrap-reverse;
+      flex-wrap: wrap-reverse;
+}
+
+.Dashboard .list .item {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+  width: 125px;
+  height: 150px;
+  margin: 15px;
+  border: 1px solid;
+  border-radius: 7px;
+  cursor: pointer;
+  -webkit-transition: background-color 500ms;
+  transition: background-color 500ms;
+}
+
+.Dashboard .list .item .title {
+  width: calc(100% - 5px - 5px);
+  -ms-flex-preferred-size: 20px;
+      flex-basis: 20px;
+  padding: 5px;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  border-bottom: 1px solid;
+}
+
+.Dashboard .list .item .text {
+  padding: 5px;
+  -ms-flex-preferred-size: calc(100% - 20px);
+      flex-basis: calc(100% - 20px);
+  overflow-y: auto;
+  overflow-x: hidden;
+  word-break: break-all;
+}
+
+.Dashboard .list .item .text::-webkit-scrollbar {
+  width: 10px;
+}
+
+.Dashboard .list .item .text::-webkit-scrollbar-track {
+  background: #f1f1f1;
+}
+
+.Dashboard .list .item .text::-webkit-scrollbar-thumb {
+  background: #888;
+}
+
+.Dashboard .list .item .text::-webkit-scrollbar-thumb:hover {
+  background: #555;
+}
+
+.Dashboard .list .item.last-seen {
+  background-color: #FF9900 !important;
+}
+
+#App.light .new-record-container {
+  color: #333333;
+  border-color: #CCCCCC;
+  background-color: #FFFFFF;
+}
+
+#App.light .list .item {
+  color: #333333;
+  border-color: #CCCCCC;
+  background-color: #FFFFFF;
+}
+
+#App.light .list .item .title {
+  border-color: #CCCCCC;
+}
+/*# sourceMappingURL=dashboard.css.map */
